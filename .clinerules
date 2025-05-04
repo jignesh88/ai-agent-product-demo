@@ -1,0 +1,37 @@
+# Project Rules and Patterns
+
+## AWS Best Practices
+- Follow AWS Well-Architected Framework principles
+- Implement least privilege IAM roles
+- Use infrastructure as code for all resources
+- Implement proper tagging for resource management
+
+## Development Workflows
+- Use feature branches with pull requests
+- Require code review before merging
+- Run comprehensive tests in CI pipeline
+- Use semantic versioning for releases
+
+## Architecture Decisions
+- Prefer serverless components where possible
+- Use event-driven architecture for asynchronous processes
+- Implement proper error handling and retry mechanisms
+- Design for horizontal scaling from the beginning
+
+## Code Standards
+- Follow TypeScript strict mode
+- Use ESLint for code quality enforcement
+- Implement comprehensive unit and integration tests
+- Document all public APIs and key functions
+
+## Security Requirements
+- Store no sensitive data in code repositories
+- Use Secrets Manager for credentials
+- Implement proper input validation on all endpoints
+- Configure WAF for API Gateway protection
+
+## Performance Considerations
+- Optimize Lambda function packages for size
+- Implement appropriate caching strategies
+- Monitor and optimize database access patterns
+- Use CloudFront for static asset delivery
