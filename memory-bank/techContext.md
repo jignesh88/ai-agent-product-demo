@@ -4,6 +4,7 @@
 - Next.js 14+ with TypeScript
 - React Server Components for performance
 - TailwindCSS for styling
+- Use Stripe like UI for minimalist look.
 - SWR for data fetching
 - Jest and React Testing Library for testing
 
