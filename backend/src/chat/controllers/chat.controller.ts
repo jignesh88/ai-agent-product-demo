@@ -6,6 +6,10 @@ import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth, ApiParam, ApiQuery, ApiBody } from '@nestjs/swagger';
 import { Request } from 'express';
 
+interface CustomRequest extends Request {
+  user: { id: string };
+}
+
 @ApiTags('chat')
 @Controller('chat')
 export class ChatController {
@@ -19,7 +23,7 @@ export class ChatController {
   @ApiResponse({ status: 201, description: 'Chat session created successfully' })
   async createSession(
     @Body() createSessionDto: { title: string; description?: string },
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession> {
     const userId = req.user['id'];
     return this.chatService.createSession(
@@ -37,7 +41,7 @@ export class ChatController {
   @ApiResponse({ status: 200, description: 'Chat sessions retrieved successfully' })
   async findAllSessions(
     @Query('status') status: SessionStatus,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession[]> {
     const userId = req.user['id'];
     return this.chatService.findAllSessions(userId, status);
@@ -52,7 +56,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async findSessionById(
     @Param('id', ParseUUIDPipe) id: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession> {
     const userId = req.user['id'];
     return this.chatService.findSessionById(id, userId);
@@ -68,7 +72,7 @@ export class ChatController {
   async updateSession(
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateSessionDto: Partial<ChatSession>,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession> {
     const userId = req.user['id'];
     return this.chatService.updateSession(id, userId, updateSessionDto);
@@ -84,7 +88,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async deleteSession(
     @Param('id', ParseUUIDPipe) id: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<void> {
     const userId = req.user['id'];
     return this.chatService.deleteSession(id, userId);
@@ -99,7 +103,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async archiveSession(
     @Param('id', ParseUUIDPipe) id: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession> {
     const userId = req.user['id'];
     return this.chatService.archiveSession(id, userId);
@@ -114,7 +118,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async shareSession(
     @Param('id', ParseUUIDPipe) id: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<{ shareCode: string }> {
     const userId = req.user['id'];
     return this.chatService.shareSession(id, userId);
@@ -129,7 +133,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async unshareSession(
     @Param('id', ParseUUIDPipe) id: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatSession> {
     const userId = req.user['id'];
     return this.chatService.unshareSession(id, userId);
@@ -156,7 +160,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat session not found' })
   async getMessages(
     @Param('id', ParseUUIDPipe) sessionId: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatMessage[]> {
     const userId = req.user['id'];
     return this.chatService.getMessagesBySessionId(sessionId, userId);
@@ -182,7 +186,7 @@ export class ChatController {
   async addMessage(
     @Param('id', ParseUUIDPipe) sessionId: string,
     @Body() messageDto: { content: string; role?: MessageRole },
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatMessage> {
     const userId = req.user['id'];
     return this.chatService.addMessage(
@@ -212,7 +216,7 @@ export class ChatController {
   async generateResponse(
     @Param('id', ParseUUIDPipe) sessionId: string,
     @Body('message') message: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<ChatMessage> {
     const userId = req.user['id'];
     return this.chatService.generateResponse(sessionId, userId, message);
@@ -228,7 +232,7 @@ export class ChatController {
   @ApiResponse({ status: 404, description: 'Chat message not found' })
   async removeMessage(
     @Param('id', ParseUUIDPipe) messageId: string,
-    @Req() req: Request,
+    @Req() req: CustomRequest,
   ): Promise<void> {
     const userId = req.user['id'];
     return this.chatService.removeMessage(messageId, userId);

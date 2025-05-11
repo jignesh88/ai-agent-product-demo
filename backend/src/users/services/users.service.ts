@@ -20,31 +20,41 @@ export class UsersService {
 
   async findById(id: string): Promise<User> {
     const user = await this.usersRepository.findOne({ where: { id } });
-    
+
     if (!user) {
       throw new NotFoundException(`User with ID "${id}" not found`);
     }
-    
+
     return user;
   }
 
   async findByEmail(email: string): Promise<User> {
     const user = await this.usersRepository.findOne({ where: { email } });
-    
+
     if (!user) {
       throw new NotFoundException(`User with email "${email}" not found`);
     }
-    
+
     return user;
   }
 
   async findByCognitoId(cognitoId: string): Promise<User> {
     const user = await this.usersRepository.findOne({ where: { cognitoId } });
-    
+
     if (!user) {
       throw new NotFoundException(`User with Cognito ID "${cognitoId}" not found`);
     }
-    
+
+    return user;
+  }
+
+  async findByStripeCustomerId(stripeCustomerId: string): Promise<User> {
+    const user = await this.usersRepository.findOne({ where: { stripeCustomerId } });
+
+    if (!user) {
+      throw new NotFoundException(`User with Stripe Customer ID "${stripeCustomerId}" not found`);
+    }
+
     return user;
   }
 
@@ -65,6 +75,9 @@ export class UsersService {
     }
     
     const user = this.usersRepository.create(createUserDto);
+    if (Array.isArray(user)) {
+      throw new Error('Expected a single User object, but received an array.');
+    }
     return this.usersRepository.save(user);
   }
 
