@@ -1,0 +1,255 @@
+/* Print-specific styles */
+
+@media print {
+  /* Hide elements that shouldn't be printed */
+  .no-print,
+  .header,
+  .footer,
+  .sidebar,
+  .navigation,
+  button:not(.print-button),
+  .mobile-menu,
+  .header-actions,
+  .header-mobile-trigger,
+  .workflow-controls,
+  .memory-bank-search {
+    display: none !important;
+  }
+  
+  /* Ensure the page has no margins */
+  @page {
+    margin: 0.5cm;
+  }
+  
+  /* Basic page setup */
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    font-size: 12pt;
+  }
+  
+  /* Ensure all text is visible */
+  body {
+    color: #000;
+  }
+  
+  /* Ensure links show their URL */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #333;
+  }
+  
+  /* Don't show URL for internal links */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  
+  /* Ensure background colors print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Ensure images are properly sized */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  /* Avoid page breaks inside important elements */
+  h1, h2, h3, h4, h5, h6, p, blockquote, table, pre, figure, ul, ol, dl {
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  /* Ensure tables are readable */
+  table {
+    border-collapse: collapse !important;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+  }
+  
+  /* Ensure code blocks are readable */
+  pre, code {
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+  }
+  
+  /* Adjust layout for printing */
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Ensure main content takes full width */
+  .main, .main-with-sidebar {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Ensure grid items stack properly */
+  .grid, .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    display: block !important;
+  }
+  
+  .grid > * {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Memory Bank specific print styles */
+  .memory-bank-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .memory-bank-grid {
+    display: block;
+  }
+  
+  /* Dashboard specific print styles */
+  .dashboard-grid {
+    display: block;
+  }
+  
+  .dashboard-stat-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .dashboard-chart-container {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Workflow specific print styles */
+  .workflow-content {
+    height: auto !important;
+  }
+  
+  /* Ensure text is readable */
+  .text-white, .text-gray-100, .text-gray-200, .text-gray-300 {
+    color: #000 !important;
+  }
+  
+  /* Ensure backgrounds don't interfere with text */
+  .bg-primary, .bg-secondary, .bg-gray-800, .bg-gray-900, .bg-black {
+    background-color: transparent !important;
+    color: #000 !important;
+  }
+  
+  /* Add page breaks where needed */
+  .page-break-before {
+    page-break-before: always;
+  }
+  
+  .page-break-after {
+    page-break-after: always;
+  }
+  
+  /* Ensure shadows don't print */
+  .shadow, .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl {
+    box-shadow: none !important;
+  }
+  
+  /* Ensure borders are visible */
+  .border, .border-t, .border-r, .border-b, .border-l {
+    border-color: #ddd !important;
+  }
+  
+  /* Print-specific typography */
+  h1 {
+    font-size: 24pt;
+  }
+  
+  h2 {
+    font-size: 20pt;
+  }
+  
+  h3 {
+    font-size: 16pt;
+  }
+  
+  h4, h5, h6 {
+    font-size: 14pt;
+  }
+  
+  p, li, td, th {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  /* Print-specific display classes */
+  .print-only {
+    display: block !important;
+  }
+  
+  .print-hidden {
+    display: none !important;
+  }
+  
+  .print-block {
+    display: block !important;
+  }
+  
+  .print-inline {
+    display: inline !important;
+  }
+  
+  .print-inline-block {
+    display: inline-block !important;
+  }
+  
+  .print-flex {
+    display: flex !important;
+  }
+  
+  /* Print-specific layout adjustments */
+  .print-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .print-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Print-specific margins and padding */
+  .print-m-0 {
+    margin: 0 !important;
+  }
+  
+  .print-p-0 {
+    padding: 0 !important;
+  }
+  
+  .print-my-4 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .print-py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}

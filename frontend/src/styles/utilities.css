@@ -1,0 +1,846 @@
+/* Utility classes */
+
+/* Display */
+.hidden {
+  @apply hidden;
+}
+
+.block {
+  @apply block;
+}
+
+.inline {
+  @apply inline;
+}
+
+.inline-block {
+  @apply inline-block;
+}
+
+.flex {
+  @apply flex;
+}
+
+.inline-flex {
+  @apply inline-flex;
+}
+
+.grid {
+  @apply grid;
+}
+
+.inline-grid {
+  @apply inline-grid;
+}
+
+/* Flex utilities */
+.flex-row {
+  @apply flex-row;
+}
+
+.flex-col {
+  @apply flex-col;
+}
+
+.flex-wrap {
+  @apply flex-wrap;
+}
+
+.flex-nowrap {
+  @apply flex-nowrap;
+}
+
+.flex-1 {
+  @apply flex-1;
+}
+
+.flex-auto {
+  @apply flex-auto;
+}
+
+.flex-initial {
+  @apply flex-initial;
+}
+
+.flex-none {
+  @apply flex-none;
+}
+
+.flex-grow {
+  @apply flex-grow;
+}
+
+.flex-grow-0 {
+  @apply flex-grow-0;
+}
+
+.flex-shrink {
+  @apply flex-shrink;
+}
+
+.flex-shrink-0 {
+  @apply flex-shrink-0;
+}
+
+/* Alignment */
+.items-start {
+  @apply items-start;
+}
+
+.items-end {
+  @apply items-end;
+}
+
+.items-center {
+  @apply items-center;
+}
+
+.items-baseline {
+  @apply items-baseline;
+}
+
+.items-stretch {
+  @apply items-stretch;
+}
+
+.justify-start {
+  @apply justify-start;
+}
+
+.justify-end {
+  @apply justify-end;
+}
+
+.justify-center {
+  @apply justify-center;
+}
+
+.justify-between {
+  @apply justify-between;
+}
+
+.justify-around {
+  @apply justify-around;
+}
+
+.justify-evenly {
+  @apply justify-evenly;
+}
+
+.content-center {
+  @apply content-center;
+}
+
+.content-start {
+  @apply content-start;
+}
+
+.content-end {
+  @apply content-end;
+}
+
+.content-between {
+  @apply content-between;
+}
+
+.content-around {
+  @apply content-around;
+}
+
+.self-auto {
+  @apply self-auto;
+}
+
+.self-start {
+  @apply self-start;
+}
+
+.self-end {
+  @apply self-end;
+}
+
+.self-center {
+  @apply self-center;
+}
+
+.self-stretch {
+  @apply self-stretch;
+}
+
+/* Spacing */
+.m-0 {
+  @apply m-0;
+}
+
+.m-1 {
+  @apply m-1;
+}
+
+.m-2 {
+  @apply m-2;
+}
+
+.m-3 {
+  @apply m-3;
+}
+
+.m-4 {
+  @apply m-4;
+}
+
+.m-5 {
+  @apply m-5;
+}
+
+.m-6 {
+  @apply m-6;
+}
+
+.m-8 {
+  @apply m-8;
+}
+
+.m-10 {
+  @apply m-10;
+}
+
+.m-12 {
+  @apply m-12;
+}
+
+.m-16 {
+  @apply m-16;
+}
+
+.m-auto {
+  @apply m-auto;
+}
+
+.mx-auto {
+  @apply mx-auto;
+}
+
+.my-auto {
+  @apply my-auto;
+}
+
+/* Padding utilities */
+.p-0 {
+  @apply p-0;
+}
+
+.p-1 {
+  @apply p-1;
+}
+
+.p-2 {
+  @apply p-2;
+}
+
+.p-3 {
+  @apply p-3;
+}
+
+.p-4 {
+  @apply p-4;
+}
+
+.p-5 {
+  @apply p-5;
+}
+
+.p-6 {
+  @apply p-6;
+}
+
+.p-8 {
+  @apply p-8;
+}
+
+.p-10 {
+  @apply p-10;
+}
+
+.p-12 {
+  @apply p-12;
+}
+
+.p-16 {
+  @apply p-16;
+}
+
+/* Width and height */
+.w-full {
+  @apply w-full;
+}
+
+.w-auto {
+  @apply w-auto;
+}
+
+.w-screen {
+  @apply w-screen;
+}
+
+.w-min {
+  @apply w-min;
+}
+
+.w-max {
+  @apply w-max;
+}
+
+.w-fit {
+  @apply w-fit;
+}
+
+.h-full {
+  @apply h-full;
+}
+
+.h-auto {
+  @apply h-auto;
+}
+
+.h-screen {
+  @apply h-screen;
+}
+
+.h-min {
+  @apply h-min;
+}
+
+.h-max {
+  @apply h-max;
+}
+
+.h-fit {
+  @apply h-fit;
+}
+
+/* Position */
+.static {
+  @apply static;
+}
+
+.fixed {
+  @apply fixed;
+}
+
+.absolute {
+  @apply absolute;
+}
+
+.relative {
+  @apply relative;
+}
+
+.sticky {
+  @apply sticky;
+}
+
+.inset-0 {
+  @apply inset-0;
+}
+
+.z-0 {
+  @apply z-0;
+}
+
+.z-10 {
+  @apply z-10;
+}
+
+.z-20 {
+  @apply z-20;
+}
+
+.z-30 {
+  @apply z-30;
+}
+
+.z-40 {
+  @apply z-40;
+}
+
+.z-50 {
+  @apply z-50;
+}
+
+/* Typography */
+.text-left {
+  @apply text-left;
+}
+
+.text-center {
+  @apply text-center;
+}
+
+.text-right {
+  @apply text-right;
+}
+
+.text-justify {
+  @apply text-justify;
+}
+
+.font-thin {
+  @apply font-thin;
+}
+
+.font-extralight {
+  @apply font-extralight;
+}
+
+.font-light {
+  @apply font-light;
+}
+
+.font-normal {
+  @apply font-normal;
+}
+
+.font-medium {
+  @apply font-medium;
+}
+
+.font-semibold {
+  @apply font-semibold;
+}
+
+.font-bold {
+  @apply font-bold;
+}
+
+.font-extrabold {
+  @apply font-extrabold;
+}
+
+.font-black {
+  @apply font-black;
+}
+
+.uppercase {
+  @apply uppercase;
+}
+
+.lowercase {
+  @apply lowercase;
+}
+
+.capitalize {
+  @apply capitalize;
+}
+
+.normal-case {
+  @apply normal-case;
+}
+
+.truncate {
+  @apply truncate;
+}
+
+.overflow-ellipsis {
+  @apply overflow-ellipsis;
+}
+
+.whitespace-normal {
+  @apply whitespace-normal;
+}
+
+.whitespace-nowrap {
+  @apply whitespace-nowrap;
+}
+
+.whitespace-pre {
+  @apply whitespace-pre;
+}
+
+.whitespace-pre-line {
+  @apply whitespace-pre-line;
+}
+
+.whitespace-pre-wrap {
+  @apply whitespace-pre-wrap;
+}
+
+/* Borders */
+.rounded-none {
+  @apply rounded-none;
+}
+
+.rounded-sm {
+  @apply rounded-sm;
+}
+
+.rounded {
+  @apply rounded;
+}
+
+.rounded-md {
+  @apply rounded-md;
+}
+
+.rounded-lg {
+  @apply rounded-lg;
+}
+
+.rounded-xl {
+  @apply rounded-xl;
+}
+
+.rounded-2xl {
+  @apply rounded-2xl;
+}
+
+.rounded-3xl {
+  @apply rounded-3xl;
+}
+
+.rounded-full {
+  @apply rounded-full;
+}
+
+/* Shadows */
+.shadow-none {
+  @apply shadow-none;
+}
+
+.shadow {
+  @apply shadow;
+}
+
+.shadow-sm {
+  @apply shadow-sm;
+}
+
+.shadow-md {
+  @apply shadow-md;
+}
+
+.shadow-lg {
+  @apply shadow-lg;
+}
+
+.shadow-xl {
+  @apply shadow-xl;
+}
+
+.shadow-2xl {
+  @apply shadow-2xl;
+}
+
+.shadow-inner {
+  @apply shadow-inner;
+}
+
+/* Opacity */
+.opacity-0 {
+  @apply opacity-0;
+}
+
+.opacity-25 {
+  @apply opacity-25;
+}
+
+.opacity-50 {
+  @apply opacity-50;
+}
+
+.opacity-75 {
+  @apply opacity-75;
+}
+
+.opacity-100 {
+  @apply opacity-100;
+}
+
+/* Transitions */
+.transition {
+  @apply transition;
+}
+
+.duration-75 {
+  @apply duration-75;
+}
+
+.duration-100 {
+  @apply duration-100;
+}
+
+.duration-150 {
+  @apply duration-150;
+}
+
+.duration-200 {
+  @apply duration-200;
+}
+
+.duration-300 {
+  @apply duration-300;
+}
+
+.duration-500 {
+  @apply duration-500;
+}
+
+.duration-700 {
+  @apply duration-700;
+}
+
+.duration-1000 {
+  @apply duration-1000;
+}
+
+.ease-linear {
+  @apply ease-linear;
+}
+
+.ease-in {
+  @apply ease-in;
+}
+
+.ease-out {
+  @apply ease-out;
+}
+
+.ease-in-out {
+  @apply ease-in-out;
+}
+
+/* Transforms */
+.scale-0 {
+  @apply scale-0;
+}
+
+.scale-50 {
+  @apply scale-50;
+}
+
+.scale-75 {
+  @apply scale-75;
+}
+
+.scale-90 {
+  @apply scale-90;
+}
+
+.scale-95 {
+  @apply scale-95;
+}
+
+.scale-100 {
+  @apply scale-100;
+}
+
+.scale-105 {
+  @apply scale-105;
+}
+
+.scale-110 {
+  @apply scale-110;
+}
+
+.scale-125 {
+  @apply scale-125;
+}
+
+.scale-150 {
+  @apply scale-150;
+}
+
+.rotate-0 {
+  @apply rotate-0;
+}
+
+.rotate-45 {
+  @apply rotate-45;
+}
+
+.rotate-90 {
+  @apply rotate-90;
+}
+
+.rotate-180 {
+  @apply rotate-180;
+}
+
+.rotate-270 {
+  @apply -rotate-90;
+}
+
+/* Accessibility */
+.sr-only {
+  @apply sr-only;
+}
+
+.not-sr-only {
+  @apply not-sr-only;
+}
+
+/* Interactivity */
+.cursor-auto {
+  @apply cursor-auto;
+}
+
+.cursor-default {
+  @apply cursor-default;
+}
+
+.cursor-pointer {
+  @apply cursor-pointer;
+}
+
+.cursor-wait {
+  @apply cursor-wait;
+}
+
+.cursor-text {
+  @apply cursor-text;
+}
+
+.cursor-move {
+  @apply cursor-move;
+}
+
+.cursor-not-allowed {
+  @apply cursor-not-allowed;
+}
+
+.pointer-events-none {
+  @apply pointer-events-none;
+}
+
+.pointer-events-auto {
+  @apply pointer-events-auto;
+}
+
+.select-none {
+  @apply select-none;
+}
+
+.select-text {
+  @apply select-text;
+}
+
+.select-all {
+  @apply select-all;
+}
+
+.select-auto {
+  @apply select-auto;
+}
+
+/* Responsive utilities */
+.hidden-xs {
+  @apply hidden xs:block;
+}
+
+.hidden-sm {
+  @apply hidden sm:block;
+}
+
+.hidden-md {
+  @apply hidden md:block;
+}
+
+.hidden-lg {
+  @apply hidden lg:block;
+}
+
+.hidden-xl {
+  @apply hidden xl:block;
+}
+
+.hidden-2xl {
+  @apply hidden 2xl:block;
+}
+
+.block-xs {
+  @apply block xs:hidden;
+}
+
+.block-sm {
+  @apply block sm:hidden;
+}
+
+.block-md {
+  @apply block md:hidden;
+}
+
+.block-lg {
+  @apply block lg:hidden;
+}
+
+.block-xl {
+  @apply block xl:hidden;
+}
+
+.block-2xl {
+  @apply block 2xl:hidden;
+}
+
+/* Print utilities */
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
+  
+  .print-block {
+    display: block !important;
+  }
+  
+  .print-inline {
+    display: inline !important;
+  }
+  
+  .print-inline-block {
+    display: inline-block !important;
+  }
+}
+
+/* Custom utilities */
+.text-truncate-1 {
+  @apply overflow-hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.text-truncate-2 {
+  @apply overflow-hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-truncate-3 {
+  @apply overflow-hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.aspect-ratio-1x1 {
+  @apply relative;
+  padding-bottom: 100%;
+}
+
+.aspect-ratio-4x3 {
+  @apply relative;
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-16x9 {
+  @apply relative;
+  padding-bottom: 56.25%;
+}
+
+.aspect-ratio-21x9 {
+  @apply relative;
+  padding-bottom: 42.86%;
+}
+
+.aspect-ratio-content {
+  @apply absolute inset-0 w-full h-full object-cover;
+}

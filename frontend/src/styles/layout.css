@@ -1,0 +1,327 @@
+/* Layout-specific styles */
+
+/* Container */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container-sm {
+  @apply max-w-3xl;
+}
+
+.container-md {
+  @apply max-w-5xl;
+}
+
+.container-lg {
+  @apply max-w-7xl;
+}
+
+.container-fluid {
+  @apply max-w-none;
+}
+
+/* Grid system */
+.grid-cols-1 {
+  @apply grid grid-cols-1;
+}
+
+.grid-cols-2 {
+  @apply grid grid-cols-1 md:grid-cols-2;
+}
+
+.grid-cols-3 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-cols-4 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+}
+
+.grid-gap-sm {
+  @apply gap-3;
+}
+
+.grid-gap-md {
+  @apply gap-6;
+}
+
+.grid-gap-lg {
+  @apply gap-8;
+}
+
+/* Flexbox layouts */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start {
+  @apply flex items-center justify-start;
+}
+
+.flex-end {
+  @apply flex items-center justify-end;
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+/* Spacing utilities */
+.section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.section-sm {
+  @apply py-6 md:py-8 lg:py-10;
+}
+
+.section-lg {
+  @apply py-16 md:py-20 lg:py-24;
+}
+
+/* Header */
+.header {
+  @apply sticky top-0 z-40 w-full border-b border-[rgb(var(--color-gray-200))] bg-white/95 backdrop-blur;
+}
+
+.header-inner {
+  @apply flex h-16 items-center justify-between;
+}
+
+.header-logo {
+  @apply flex items-center space-x-2;
+}
+
+.header-nav {
+  @apply hidden md:flex md:items-center md:space-x-6;
+}
+
+.header-nav-item {
+  @apply text-sm font-medium text-[rgb(var(--color-gray-700))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+.header-nav-item-active {
+  @apply text-[rgb(var(--color-primary))];
+}
+
+.header-actions {
+  @apply flex items-center space-x-4;
+}
+
+.header-mobile-trigger {
+  @apply -mr-2 flex items-center md:hidden;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  @apply fixed inset-0 z-50 bg-white md:hidden;
+}
+
+.mobile-menu-header {
+  @apply flex items-center justify-between border-b border-[rgb(var(--color-gray-200))] px-4 py-4;
+}
+
+.mobile-menu-close {
+  @apply -mr-2 flex items-center justify-center rounded-md p-2 text-[rgb(var(--color-gray-700))];
+}
+
+.mobile-menu-nav {
+  @apply flex flex-col space-y-1 px-4 pt-4 pb-8;
+}
+
+.mobile-menu-nav-item {
+  @apply block rounded-md px-3 py-2 text-base font-medium text-[rgb(var(--color-gray-700))] hover:bg-[rgb(var(--color-gray-100))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+.mobile-menu-nav-item-active {
+  @apply bg-[rgba(var(--color-primary),0.1)] text-[rgb(var(--color-primary))];
+}
+
+/* Sidebar */
+.sidebar {
+  @apply fixed inset-y-0 left-0 z-30 w-64 transform border-r border-[rgb(var(--color-gray-200))] bg-white transition duration-300 ease-in-out;
+}
+
+.sidebar-header {
+  @apply flex h-16 items-center border-b border-[rgb(var(--color-gray-200))] px-4;
+}
+
+.sidebar-content {
+  @apply flex flex-col h-[calc(100vh-4rem)] overflow-y-auto;
+}
+
+.sidebar-nav {
+  @apply flex-1 space-y-1 px-2 py-4;
+}
+
+.sidebar-nav-item {
+  @apply flex items-center rounded-md px-3 py-2 text-sm font-medium text-[rgb(var(--color-gray-700))] hover:bg-[rgb(var(--color-gray-100))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+.sidebar-nav-item-active {
+  @apply bg-[rgba(var(--color-primary),0.1)] text-[rgb(var(--color-primary))];
+}
+
+.sidebar-nav-icon {
+  @apply mr-3 h-5 w-5 flex-shrink-0;
+}
+
+.sidebar-footer {
+  @apply border-t border-[rgb(var(--color-gray-200))] p-4;
+}
+
+/* Main content */
+.main {
+  @apply flex-1 overflow-auto;
+}
+
+.main-with-sidebar {
+  @apply ml-0 md:ml-64;
+}
+
+/* Footer */
+.footer {
+  @apply border-t border-[rgb(var(--color-gray-200))] bg-white;
+}
+
+.footer-inner {
+  @apply py-8 md:py-12;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4;
+}
+
+.footer-column {
+  @apply space-y-4;
+}
+
+.footer-column-title {
+  @apply text-sm font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.footer-nav {
+  @apply space-y-3;
+}
+
+.footer-nav-item {
+  @apply block text-sm text-[rgb(var(--color-gray-600))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+.footer-bottom {
+  @apply border-t border-[rgb(var(--color-gray-200))] py-6 text-center text-sm text-[rgb(var(--color-gray-600))];
+}
+
+/* Page layouts */
+.page {
+  @apply min-h-[calc(100vh-4rem)];
+}
+
+.page-header {
+  @apply border-b border-[rgb(var(--color-gray-200))] bg-white py-6;
+}
+
+.page-title {
+  @apply text-2xl font-bold text-[rgb(var(--color-gray-900))];
+}
+
+.page-description {
+  @apply mt-1 text-sm text-[rgb(var(--color-gray-600))];
+}
+
+.page-content {
+  @apply py-6;
+}
+
+/* Dashboard layout */
+.dashboard {
+  @apply flex min-h-screen flex-col;
+}
+
+.dashboard-content {
+  @apply flex flex-1;
+}
+
+.dashboard-main {
+  @apply flex-1 overflow-auto;
+}
+
+.dashboard-header {
+  @apply border-b border-[rgb(var(--color-gray-200))] bg-white py-4 px-4 sm:px-6 lg:px-8;
+}
+
+.dashboard-title {
+  @apply text-xl font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.dashboard-grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+/* Memory Bank layout */
+.memory-bank {
+  @apply flex flex-col h-full;
+}
+
+.memory-bank-header {
+  @apply border-b border-[rgb(var(--color-gray-200))] bg-white p-4;
+}
+
+.memory-bank-search {
+  @apply mb-4;
+}
+
+.memory-bank-content {
+  @apply flex-1 overflow-auto p-4;
+}
+
+.memory-bank-grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Workflow layout */
+.workflow {
+  @apply flex flex-col h-full;
+}
+
+.workflow-header {
+  @apply border-b border-[rgb(var(--color-gray-200))] bg-white p-4;
+}
+
+.workflow-content {
+  @apply flex-1 relative;
+}
+
+.workflow-sidebar {
+  @apply absolute top-0 right-0 w-64 h-full border-l border-[rgb(var(--color-gray-200))] bg-white p-4 overflow-y-auto;
+}
+
+/* Auth pages */
+.auth-page {
+  @apply flex min-h-screen items-center justify-center bg-[rgb(var(--color-gray-50))];
+}
+
+.auth-card {
+  @apply w-full max-w-md overflow-hidden rounded-lg bg-white shadow-md;
+}
+
+.auth-header {
+  @apply border-b border-[rgb(var(--color-gray-200))] bg-white p-6 text-center;
+}
+
+.auth-title {
+  @apply text-xl font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.auth-content {
+  @apply p-6;
+}
+
+.auth-footer {
+  @apply border-t border-[rgb(var(--color-gray-200))] bg-[rgb(var(--color-gray-50))] p-4 text-center text-sm text-[rgb(var(--color-gray-600))];
+}

@@ -1,0 +1,294 @@
+/* Component-specific styles */
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-primary {
+  @apply bg-[rgb(var(--color-primary))] text-white hover:bg-[rgb(var(--color-primary-dark))] focus-visible:ring-[rgb(var(--color-primary))];
+}
+
+.btn-secondary {
+  @apply bg-white text-[rgb(var(--color-gray-900))] border border-[rgb(var(--color-gray-300))] hover:bg-[rgb(var(--color-gray-100))] focus-visible:ring-[rgb(var(--color-primary))];
+}
+
+.btn-outline {
+  @apply border border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))] bg-transparent hover:bg-[rgba(var(--color-primary),0.1)] focus-visible:ring-[rgb(var(--color-primary))];
+}
+
+.btn-ghost {
+  @apply text-[rgb(var(--color-gray-700))] hover:bg-[rgb(var(--color-gray-100))] hover:text-[rgb(var(--color-gray-900))] focus-visible:ring-[rgb(var(--color-gray-400))];
+}
+
+.btn-danger {
+  @apply bg-[rgb(var(--color-error))] text-white hover:bg-[rgba(var(--color-error),0.9)] focus-visible:ring-[rgb(var(--color-error))];
+}
+
+.btn-sm {
+  @apply h-8 px-3 text-xs;
+}
+
+.btn-md {
+  @apply h-10 px-4 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply h-12 px-6 py-3 text-base;
+}
+
+.btn-icon {
+  @apply p-2 flex items-center justify-center;
+}
+
+/* Cards */
+.card {
+  @apply rounded-lg border border-[rgb(var(--color-gray-200))] bg-white shadow-sm overflow-hidden;
+}
+
+.card-header {
+  @apply p-4 border-b border-[rgb(var(--color-gray-200))] bg-[rgb(var(--color-gray-50))];
+}
+
+.card-title {
+  @apply text-lg font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.card-body {
+  @apply p-4;
+}
+
+.card-footer {
+  @apply p-4 border-t border-[rgb(var(--color-gray-200))] bg-[rgb(var(--color-gray-50))];
+}
+
+/* Form elements */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-[rgb(var(--color-gray-700))] mb-1;
+}
+
+.form-input {
+  @apply block w-full rounded-md border border-[rgb(var(--color-gray-300))] px-3 py-2 text-[rgb(var(--color-gray-900))] placeholder-[rgb(var(--color-gray-400))] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] focus:border-transparent disabled:opacity-50 disabled:bg-[rgb(var(--color-gray-100))];
+}
+
+.form-select {
+  @apply block w-full rounded-md border border-[rgb(var(--color-gray-300))] px-3 py-2 text-[rgb(var(--color-gray-900))] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] focus:border-transparent disabled:opacity-50 disabled:bg-[rgb(var(--color-gray-100))];
+}
+
+.form-checkbox {
+  @apply rounded border-[rgb(var(--color-gray-300))] text-[rgb(var(--color-primary))] focus:ring-[rgb(var(--color-primary))];
+}
+
+.form-radio {
+  @apply border-[rgb(var(--color-gray-300))] text-[rgb(var(--color-primary))] focus:ring-[rgb(var(--color-primary))];
+}
+
+.form-error {
+  @apply text-sm text-[rgb(var(--color-error))] mt-1;
+}
+
+.form-hint {
+  @apply text-sm text-[rgb(var(--color-gray-500))] mt-1;
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+
+.badge-primary {
+  @apply bg-[rgba(var(--color-primary),0.1)] text-[rgb(var(--color-primary))];
+}
+
+.badge-secondary {
+  @apply bg-[rgba(var(--color-secondary),0.1)] text-[rgb(var(--color-secondary))];
+}
+
+.badge-success {
+  @apply bg-[rgba(var(--color-success),0.1)] text-[rgb(var(--color-success))];
+}
+
+.badge-error {
+  @apply bg-[rgba(var(--color-error),0.1)] text-[rgb(var(--color-error))];
+}
+
+.badge-warning {
+  @apply bg-[rgba(var(--color-warning),0.1)] text-[rgb(var(--color-warning))];
+}
+
+.badge-info {
+  @apply bg-[rgba(var(--color-info),0.1)] text-[rgb(var(--color-info))];
+}
+
+/* Alerts */
+.alert {
+  @apply rounded-md p-4 mb-4 border;
+}
+
+.alert-info {
+  @apply bg-[rgba(var(--color-info),0.1)] border-[rgb(var(--color-info))] text-[rgb(var(--color-info))];
+}
+
+.alert-success {
+  @apply bg-[rgba(var(--color-success),0.1)] border-[rgb(var(--color-success))] text-[rgb(var(--color-success))];
+}
+
+.alert-warning {
+  @apply bg-[rgba(var(--color-warning),0.1)] border-[rgb(var(--color-warning))] text-[rgb(var(--color-warning))];
+}
+
+.alert-error {
+  @apply bg-[rgba(var(--color-error),0.1)] border-[rgb(var(--color-error))] text-[rgb(var(--color-error))];
+}
+
+/* Tables */
+.table {
+  @apply w-full text-sm text-left text-[rgb(var(--color-gray-700))];
+}
+
+.table-header {
+  @apply bg-[rgb(var(--color-gray-50))];
+}
+
+.table-row {
+  @apply border-b border-[rgb(var(--color-gray-200))] hover:bg-[rgb(var(--color-gray-50))];
+}
+
+.table-cell {
+  @apply px-4 py-3;
+}
+
+.table-cell-header {
+  @apply px-4 py-3 font-medium text-[rgb(var(--color-gray-900))];
+}
+
+/* Tabs */
+.tabs {
+  @apply flex border-b border-[rgb(var(--color-gray-200))];
+}
+
+.tab {
+  @apply px-4 py-2 text-sm font-medium text-[rgb(var(--color-gray-700))] hover:text-[rgb(var(--color-gray-900))] cursor-pointer;
+}
+
+.tab-active {
+  @apply text-[rgb(var(--color-primary))] border-b-2 border-[rgb(var(--color-primary))];
+}
+
+.tab-content {
+  @apply py-4;
+}
+
+/* Modals */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal {
+  @apply bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-auto;
+}
+
+.modal-header {
+  @apply p-4 border-b border-[rgb(var(--color-gray-200))];
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.modal-body {
+  @apply p-4;
+}
+
+.modal-footer {
+  @apply p-4 border-t border-[rgb(var(--color-gray-200))] flex justify-end space-x-2;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply relative inline-block;
+}
+
+.tooltip-content {
+  @apply absolute z-10 px-3 py-2 text-sm font-medium text-white bg-[rgb(var(--color-gray-900))] rounded-md shadow-sm invisible opacity-0 transition-opacity duration-300;
+}
+
+.tooltip:hover .tooltip-content {
+  @apply visible opacity-100;
+}
+
+/* Dropdown */
+.dropdown {
+  @apply relative inline-block;
+}
+
+.dropdown-content {
+  @apply absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-[rgb(var(--color-gray-700))] hover:bg-[rgb(var(--color-gray-100))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+/* Pagination */
+.pagination {
+  @apply flex items-center space-x-1;
+}
+
+.pagination-item {
+  @apply inline-flex items-center justify-center h-8 w-8 rounded-md text-sm font-medium text-[rgb(var(--color-gray-700))] hover:bg-[rgb(var(--color-gray-100))] hover:text-[rgb(var(--color-gray-900))];
+}
+
+.pagination-item-active {
+  @apply bg-[rgb(var(--color-primary))] text-white hover:bg-[rgb(var(--color-primary-dark))] hover:text-white;
+}
+
+/* Memory Bank specific components */
+.document-card {
+  @apply flex flex-col border rounded-lg overflow-hidden transition-shadow hover:shadow-md;
+}
+
+.document-card-header {
+  @apply p-3 bg-[rgb(var(--color-gray-50))] border-b border-[rgb(var(--color-gray-200))];
+}
+
+.document-card-body {
+  @apply p-4 flex-grow;
+}
+
+.document-card-footer {
+  @apply p-3 bg-[rgb(var(--color-gray-50))] border-t border-[rgb(var(--color-gray-200))] flex justify-between items-center;
+}
+
+.search-result {
+  @apply border-l-4 border-[rgb(var(--color-primary))] pl-3 py-2 mb-4;
+}
+
+.search-result-highlight {
+  @apply bg-[rgba(var(--color-primary),0.1)] text-[rgb(var(--color-primary-dark))] px-1 rounded;
+}
+
+.uploader-dropzone {
+  @apply border-2 border-dashed border-[rgb(var(--color-gray-300))] rounded-lg p-6 text-center hover:border-[rgb(var(--color-primary))] transition-colors;
+}
+
+/* Workflow specific components */
+.workflow-node {
+  @apply rounded-md border border-[rgb(var(--color-gray-300))] bg-white p-3 shadow-sm;
+}
+
+.workflow-node-header {
+  @apply font-medium text-[rgb(var(--color-gray-900))] mb-1;
+}
+
+.workflow-edge {
+  @apply stroke-[rgb(var(--color-gray-400))] stroke-2;
+}
+
+.workflow-controls {
+  @apply flex items-center space-x-2 p-2 bg-[rgb(var(--color-gray-50))] border border-[rgb(var(--color-gray-200))] rounded-md;
+}

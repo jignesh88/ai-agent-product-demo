@@ -56,3 +56,5 @@ cdk.context.json
 .stylelintcache
 .yarn-integrity
 .vercel
+
+**/.claude/settings.local.json

@@ -1,0 +1,331 @@
+/* Theme-specific styles */
+
+/* Typography */
+.text-heading-1 {
+  @apply text-4xl font-bold tracking-tight text-[rgb(var(--color-gray-900))] sm:text-5xl;
+}
+
+.text-heading-2 {
+  @apply text-3xl font-bold tracking-tight text-[rgb(var(--color-gray-900))] sm:text-4xl;
+}
+
+.text-heading-3 {
+  @apply text-2xl font-bold tracking-tight text-[rgb(var(--color-gray-900))] sm:text-3xl;
+}
+
+.text-heading-4 {
+  @apply text-xl font-bold text-[rgb(var(--color-gray-900))] sm:text-2xl;
+}
+
+.text-heading-5 {
+  @apply text-lg font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.text-heading-6 {
+  @apply text-base font-semibold text-[rgb(var(--color-gray-900))];
+}
+
+.text-body-lg {
+  @apply text-lg text-[rgb(var(--color-gray-700))];
+}
+
+.text-body {
+  @apply text-base text-[rgb(var(--color-gray-700))];
+}
+
+.text-body-sm {
+  @apply text-sm text-[rgb(var(--color-gray-700))];
+}
+
+.text-caption {
+  @apply text-xs text-[rgb(var(--color-gray-600))];
+}
+
+.text-overline {
+  @apply text-xs font-medium uppercase tracking-wider text-[rgb(var(--color-gray-600))];
+}
+
+/* Colors */
+.text-primary {
+  @apply text-[rgb(var(--color-primary))];
+}
+
+.text-secondary {
+  @apply text-[rgb(var(--color-secondary))];
+}
+
+.text-success {
+  @apply text-[rgb(var(--color-success))];
+}
+
+.text-error {
+  @apply text-[rgb(var(--color-error))];
+}
+
+.text-warning {
+  @apply text-[rgb(var(--color-warning))];
+}
+
+.text-info {
+  @apply text-[rgb(var(--color-info))];
+}
+
+.bg-primary {
+  @apply bg-[rgb(var(--color-primary))];
+}
+
+.bg-primary-light {
+  @apply bg-[rgba(var(--color-primary),0.1)];
+}
+
+.bg-secondary {
+  @apply bg-[rgb(var(--color-secondary))];
+}
+
+.bg-secondary-light {
+  @apply bg-[rgba(var(--color-secondary),0.1)];
+}
+
+.bg-success {
+  @apply bg-[rgb(var(--color-success))];
+}
+
+.bg-success-light {
+  @apply bg-[rgba(var(--color-success),0.1)];
+}
+
+.bg-error {
+  @apply bg-[rgb(var(--color-error))];
+}
+
+.bg-error-light {
+  @apply bg-[rgba(var(--color-error),0.1)];
+}
+
+.bg-warning {
+  @apply bg-[rgb(var(--color-warning))];
+}
+
+.bg-warning-light {
+  @apply bg-[rgba(var(--color-warning),0.1)];
+}
+
+.bg-info {
+  @apply bg-[rgb(var(--color-info))];
+}
+
+.bg-info-light {
+  @apply bg-[rgba(var(--color-info),0.1)];
+}
+
+/* Borders */
+.border-primary {
+  @apply border-[rgb(var(--color-primary))];
+}
+
+.border-secondary {
+  @apply border-[rgb(var(--color-secondary))];
+}
+
+.border-success {
+  @apply border-[rgb(var(--color-success))];
+}
+
+.border-error {
+  @apply border-[rgb(var(--color-error))];
+}
+
+.border-warning {
+  @apply border-[rgb(var(--color-warning))];
+}
+
+.border-info {
+  @apply border-[rgb(var(--color-info))];
+}
+
+/* Shadows */
+.shadow-sm {
+  @apply shadow-[var(--shadow-sm)];
+}
+
+.shadow-md {
+  @apply shadow-[var(--shadow-md)];
+}
+
+.shadow-lg {
+  @apply shadow-[var(--shadow-lg)];
+}
+
+.shadow-xl {
+  @apply shadow-[var(--shadow-xl)];
+}
+
+/* Transitions */
+.transition-fast {
+  @apply transition duration-[var(--transition-fast)] ease-[var(--transition-ease)];
+}
+
+.transition-normal {
+  @apply transition duration-[var(--transition-normal)] ease-[var(--transition-ease)];
+}
+
+.transition-slow {
+  @apply transition duration-[var(--transition-slow)] ease-[var(--transition-ease)];
+}
+
+/* Stripe-like UI elements */
+.stripe-card {
+  @apply rounded-lg border border-[rgb(var(--color-gray-200))] bg-white p-6 shadow-sm transition-shadow hover:shadow-md;
+}
+
+.stripe-input {
+  @apply block w-full rounded-md border border-[rgb(var(--color-gray-300))] px-3 py-2 text-[rgb(var(--color-gray-900))] shadow-sm focus:border-[rgb(var(--color-primary))] focus:ring-1 focus:ring-[rgb(var(--color-primary))] sm:text-sm;
+}
+
+.stripe-button {
+  @apply inline-flex items-center justify-center rounded-md bg-[rgb(var(--color-primary))] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[rgb(var(--color-primary-dark))] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] focus:ring-offset-2 disabled:opacity-50;
+}
+
+.stripe-badge {
+  @apply inline-flex items-center rounded-full bg-[rgba(var(--color-primary),0.1)] px-2.5 py-0.5 text-xs font-medium text-[rgb(var(--color-primary))];
+}
+
+.stripe-divider {
+  @apply my-6 h-px bg-[rgb(var(--color-gray-200))];
+}
+
+.stripe-link {
+  @apply text-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary-dark))] hover:underline;
+}
+
+/* Memory Bank specific theme */
+.memory-bank-card {
+  @apply rounded-lg border border-[rgb(var(--color-gray-200))] bg-white overflow-hidden shadow-sm transition-shadow hover:shadow-md;
+}
+
+.memory-bank-search-input {
+  @apply block w-full rounded-md border-0 py-1.5 pl-10 pr-3 text-[rgb(var(--color-gray-900))] ring-1 ring-inset ring-[rgb(var(--color-gray-300))] placeholder:text-[rgb(var(--color-gray-400))] focus:ring-2 focus:ring-inset focus:ring-[rgb(var(--color-primary))] sm:text-sm sm:leading-6;
+}
+
+.memory-bank-tag {
+  @apply inline-flex items-center rounded-full bg-[rgba(var(--color-primary),0.1)] px-2.5 py-0.5 text-xs font-medium text-[rgb(var(--color-primary))];
+}
+
+.memory-bank-document-icon {
+  @apply h-10 w-10 flex-shrink-0 rounded-full bg-[rgba(var(--color-primary),0.1)] p-2 text-[rgb(var(--color-primary))];
+}
+
+/* Workflow specific theme */
+.workflow-canvas {
+  @apply bg-[rgb(var(--color-gray-50))] h-full w-full;
+}
+
+.workflow-node-primary {
+  @apply border-[rgb(var(--color-primary))] bg-[rgba(var(--color-primary),0.1)];
+}
+
+.workflow-node-secondary {
+  @apply border-[rgb(var(--color-secondary))] bg-[rgba(var(--color-secondary),0.1)];
+}
+
+.workflow-node-success {
+  @apply border-[rgb(var(--color-success))] bg-[rgba(var(--color-success),0.1)];
+}
+
+.workflow-node-error {
+  @apply border-[rgb(var(--color-error))] bg-[rgba(var(--color-error),0.1)];
+}
+
+.workflow-node-warning {
+  @apply border-[rgb(var(--color-warning))] bg-[rgba(var(--color-warning),0.1)];
+}
+
+.workflow-node-info {
+  @apply border-[rgb(var(--color-info))] bg-[rgba(var(--color-info),0.1)];
+}
+
+.workflow-edge-primary {
+  @apply stroke-[rgb(var(--color-primary))];
+}
+
+.workflow-edge-secondary {
+  @apply stroke-[rgb(var(--color-secondary))];
+}
+
+.workflow-edge-success {
+  @apply stroke-[rgb(var(--color-success))];
+}
+
+.workflow-edge-error {
+  @apply stroke-[rgb(var(--color-error))];
+}
+
+.workflow-edge-warning {
+  @apply stroke-[rgb(var(--color-warning))];
+}
+
+.workflow-edge-info {
+  @apply stroke-[rgb(var(--color-info))];
+}
+
+/* Dashboard specific theme */
+.dashboard-stat-card {
+  @apply rounded-lg border border-[rgb(var(--color-gray-200))] bg-white p-6 shadow-sm;
+}
+
+.dashboard-stat-value {
+  @apply mt-2 text-3xl font-bold text-[rgb(var(--color-gray-900))];
+}
+
+.dashboard-stat-label {
+  @apply text-sm font-medium text-[rgb(var(--color-gray-500))];
+}
+
+.dashboard-stat-change-positive {
+  @apply text-sm font-medium text-[rgb(var(--color-success))];
+}
+
+.dashboard-stat-change-negative {
+  @apply text-sm font-medium text-[rgb(var(--color-error))];
+}
+
+.dashboard-chart-container {
+  @apply rounded-lg border border-[rgb(var(--color-gray-200))] bg-white p-4 shadow-sm;
+}
+
+.dashboard-chart-title {
+  @apply text-sm font-medium text-[rgb(var(--color-gray-900))];
+}
+
+/* Auth specific theme */
+.auth-input {
+  @apply block w-full rounded-md border-0 py-1.5 text-[rgb(var(--color-gray-900))] shadow-sm ring-1 ring-inset ring-[rgb(var(--color-gray-300))] placeholder:text-[rgb(var(--color-gray-400))] focus:ring-2 focus:ring-inset focus:ring-[rgb(var(--color-primary))] sm:text-sm sm:leading-6;
+}
+
+.auth-button {
+  @apply flex w-full justify-center rounded-md bg-[rgb(var(--color-primary))] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[rgb(var(--color-primary-dark))] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--color-primary))];
+}
+
+.auth-social-button {
+  @apply flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-1.5 text-sm font-semibold text-[rgb(var(--color-gray-900))] shadow-sm ring-1 ring-inset ring-[rgb(var(--color-gray-300))] hover:bg-[rgb(var(--color-gray-50))];
+}
+
+.auth-divider {
+  @apply relative my-4;
+}
+
+.auth-divider-line {
+  @apply absolute inset-0 flex items-center;
+}
+
+.auth-divider-line-inner {
+  @apply w-full border-t border-[rgb(var(--color-gray-300))];
+}
+
+.auth-divider-text {
+  @apply relative flex justify-center text-sm font-medium leading-6 text-[rgb(var(--color-gray-600))];
+}
+
+.auth-divider-text-inner {
+  @apply bg-white px-2;
+}
